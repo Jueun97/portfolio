@@ -96,9 +96,9 @@
             aliquid libero? Maiores voluptatem aliquid tenetur officiis perspiciatis, 
             ratione ea magni, nisi ex doloribus maxime ab nesciunt ullam, quibusdam voluptates minima.
         </p>
-        <div class="skills__attributes">
+        <div class="skillset">
             <div class="skillset__left">
-                <h3 class="skillset__title"></h3>
+                <h3 class="skillset__title">Skill</h3>
                 <div class="skill">
                     <span class="skill__title">HTML</span>
                     <span class="skill__percentage">70%</span>
@@ -109,32 +109,63 @@
                 <div class="skill">
                     <div class="skill__title">CSS</div>
                     <div class="skill__percentage">70%</div>
-                    <div class="skill__bar"></div>
+                    <div class="skill__progress">
+                        <div class="skill__value"></div>
+                    </div>
                 </div>
                 <div class="skill">
                     <div class="skill__title">JAVASCRIPT
                     </div>
                     <div class="skill__percentage">60%</div>
-                    <div class="skill__bar"></div>
+                    <div class="skill__progress">
+                        <div class="skill__value"></div>
+                    </div>
                 </div>
                 <div class="skill">
                     <div class="skill__title">REACT</div>
                     <div class="skill__percentage">50%</div>
-                    <div class="skill__bar"></div>
+                    <div class="skill__progress">
+                        <div class="skill__value"></div>
+                    </div>
                 </div>
             </div>
             <div class="skillset__right">
-                <h3 class="attribute__title"></h3>
-                <div class="tool__description">Visual Studio Code</div>
+                <div class="tools">
+                    <h3 class="skillset__title">Tools</h3>
+                    <div class="tool__description">Visual Studio Code</div>
+                </div>
           
-            <div class="attribute__etc">
-                <h3 class="attribute__title"></h3>
-                <div class="tool__description">Git, Mysql</div>
+                <div class="etc">
+                    <h3 class="attribute__title">Etc</h3>
+                    <div class="tool__description">Git, Mysql</div>
+                </div>
             </div>
-        
+        </div>
     </section>
     <!-- Work -->
-    <section id="work"></section>
+    <section id="work">
+        <h1>My Work</h1>
+        <h2>Projects</h2>
+        <!-- 클릭해야 하는 경우는 button사용 (li 말고)  -->
+        <div class="work__catagories">
+            <!-- class naming 참고 -->
+            <button class="catagory__btn">All<sapn class="catagory__count">10</sapn></button>
+            <button class="catagory__btn">Front-end<sapn class="catagory__count">3</sapn></button>
+            <button class="catagory__btn">Back-end<sapn class="catagory__count">3</sapn></button>
+            <button class="catagory__btn">Mobile<sapn class="catagory__count">4</sapn></button>
+        </div>
+        <div class="work__projects">
+            <!-- 이동해야 하는 경우는 a 사용 (div 말고) 섹션 구분시 div가 필수는 아님@-->
+            <a href="#" class="project">
+                <img src="" alt="" class="proejct__img">
+                <div class="project__description">
+                    <h3>title</h3>
+                    <span>desc</span>
+                </div>
+            </a>
+        </div>
+       
+    </section>
     <!-- Testimonials -->
     <section id="testimonials"></section>
     <!-- Contact -->
