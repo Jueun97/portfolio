@@ -1,1 +1,20 @@
 /* font-family: 'Nunito', sans-serif; */
+:root {
+    /* Color */
+    --black-color: #000a12;
+    --white-color: #ffffff;
+    --blue-color: #5c6bc0;
+    --darkpurple-color: #836fa9;
+    --purple-color: #b39ddb;
+    --lightpurple-color:#e6ceff;
+
+    /* Size */
+    --side-padding: 30px;
+    /* Font Size*/
+    --font-large: 100px;
+    --font-medium: ;
+    --font-small: 20px;
+}
+* {
+    box-sizing: border-box;
+}
