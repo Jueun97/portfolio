@@ -12,6 +12,7 @@
     --font-large: 40px;
     --font-medium: 30px;
     --font-small: 17px;
+    --font-micro: 13px;
  
 
     /* Font weight */
@@ -25,6 +26,9 @@
      /* Padding */
      --padding-box: 5px;
      --padding-side: 30px;
+
+     /* Width */
+     --width-max: 700px;
 }
 * {
     box-sizing: border-box;
@@ -65,6 +69,9 @@ button {
     background-color: transparent;
     border: 0;
     outline-style: none;
+}
+p {
+    margin:0;
 }
 #navbar {
     display: flex;
@@ -131,4 +138,59 @@ button {
     color: var(--white-color);
     border: 2px solid var(--white-color);
     border-radius: var(--border-radius);
+}
+
+.section{
+    text-align: center;
+    max-width: var(--width-max);
+    margin: auto;
+}
+
+#about{
+
+}
+.about__majors{
+    display: flex;
+    color: rgb(78, 77, 77) ; 
+
+}
+.major{
+    margin: 30px;
+}
+.major__logo{
+    border: 2px solid var(--lightpurple-color);
+    height: 170px;
+    width: 170px;
+    line-height: 170px;
+    font-size: 60px;
+    color: var(--lightpurple-color);
+    margin: 20px 0;
+    border-radius: 50%;
+}
+.major__logo:hover  i{
+    transform: scale(1.2);
+    color: var(--purple-color);
+    transition: 300ms ease;
+}
+.major__title{
+    font-weight: var(--weight-semi-bold);
+}
+.major__description{
+    font-size: var(--font-micro);
+}
+.job{
+    display: flex;
+    align-items: center;
+}
+.job__logo{
+    width: 30px;
+    font-size: 20px;
+}
+.job__description{
+    margin-left: 10px;
+    color: lightgray;
+}
+.description__period{
+    font-size: var(--font-micro);
+    text-align: start;
 }
