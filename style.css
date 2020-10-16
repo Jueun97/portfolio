@@ -7,6 +7,10 @@
     --darkpurple-color: #836fa9;
     --purple-color: #b39ddb;
     --lightpurple-color:#e6ceff;
+    --yellow-color: #fff59d;
+    --grey-color: #757575;
+    --darkgrey-color: #616161;
+    --lightgreay-color: #a4a4a4;
 
     /* Font Size*/
     --font-large: 40px;
@@ -69,6 +73,7 @@ button {
     background-color: transparent;
     border: 0;
     outline-style: none;
+    cursor: pointer;
 }
 p {
     margin:0;
@@ -142,10 +147,13 @@ p {
 
 .section{
     text-align: center;
-    max-width: var(--width-max);
     margin: auto;
 }
 
+.section__container{
+    max-width: var(--width-max);
+    margin: auto;
+}
 #about{
 
 }
@@ -193,4 +201,51 @@ p {
 .description__period{
     font-size: var(--font-micro);
     text-align: start;
+}
+
+#skills{
+    background-color: var(--yellow-color);
+    padding: 10px;
+}
+.skillset{
+    display: flex;
+    background-color: var(--grey-color);
+    color: var(--white-color);
+    margin: 20px 0;
+}
+.skillset__title{
+    color: var(--white-color);
+    margin:0;
+    padding-top:10px;
+}
+.skillset__left{
+    flex-basis: 60%;
+    background-color: var(--darkgrey-color);
+}
+.skill__information{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.skill__progress{
+    width:100%;
+    height: 3px;
+    background-color: grey;
+}
+.skill__value{
+    width:100%;
+    height:3px;
+    background-color: var(--purple-color);
+}
+.skillset__right{
+    flex-basis: 40%;
+}
+.tools{
+    height: 50%;
+ 
+}
+.etc{
+    height: 50%;
+    background-color: var(--lightgreay-color);
 }
