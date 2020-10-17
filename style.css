@@ -221,6 +221,7 @@ p {
 .skillset__left{
     flex-basis: 60%;
     background-color: var(--darkgrey-color);
+    padding: 10px 20px;
 }
 .skill__information{
     display: flex;
@@ -249,3 +250,92 @@ p {
     height: 50%;
     background-color: var(--lightgreay-color);
 }
+.work__catagories{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.catagory__btn{
+    border: 1px solid var(--lightgreay-color);
+    padding: 5px 30px;
+    border-radius: var(--border-radius);
+    margin: 25px 0;
+    position: relative;
+
+
+}
+/* opacity 범위 : 0~1 */
+.catagory__count{
+    display: inline-block;
+    border: 2px solid var(--yellow-color);
+    border-radius: 50%;
+    margin-left: 7px;
+    width:24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: var(--font-micro);
+    position: relative;
+    top: -24px;
+    opacity: 0;
+    transition: all 300ms ease;
+    
+
+  
+}
+/* acitve인 catagory__btn과 hover인 catagory__btn*/
+.catagory__btn.active,.catagory__btn:hover{
+    background-color: var(--purple-color);
+    
+}
+ /* acitve인 catagory__btn의 count와 hover인 catagory__btn의 count  */
+ .catagory__btn.active .catagory__count, .catagory__btn:hover .catagory__count{
+    background-color: var(--yellow-color);
+    opacity: 1;
+    top:0;
+}
+/* wrap 형식 : 자동으로 동적으로 작동 가능 grid : 동적으로 작동 x */
+.work__projects{
+    display: flex;
+    flex-wrap: wrap; 
+   /* display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 10px;
+   margin: 0; */
+   justify-content: center;
+   position: relative;
+
+}
+.project{
+    width:200px;
+    height: 300px;
+    margin: 10px; 
+    margin-bottom: 50px;
+}
+/*  */
+.project__img{
+    width:100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+}
+/* 포지션을 absolute로 지정하였기 때문에 부모클래스를 기준으로 함(static이 아닌 부모 클래스) */
+/* width, height 을 100%로 지정하면 부모클래스(work__projects)의 크기만큼 커짐! 그래서 특정 크기를 지정함 */
+.project__description{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    color:black;
+    justify-content: center;
+    top:0;
+    opacity: 0;
+    background-color: var(--lightpurple-color);
+    width: 200px;
+    height: 100%;
+    font-weight: var(--weight-bold);
+}
+/* opacity는 배경을 흐리게 함! 글씨는 그대로~ */
+.project:hover .project__description{
+    transition: all 300ms ease;
+    opacity: 0.8;
+    color: var(--black-color);
+}
+
