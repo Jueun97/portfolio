@@ -24,8 +24,8 @@ navbarMenu.addEventListener('click', (event => {
     if (value == null)
         return;
    
-    const section = document.querySelector(value);
-    section.scrollIntoView({ behavior: "smooth", block: "center" });
+    scrollView(value, 'center');
+
     // highligt the clicked section button
     const item = navbarMenu.children;
     for (let i = 0; i < item.length; i++){
@@ -40,7 +40,12 @@ navbarMenu.addEventListener('click', (event => {
 // move to contact section
 const contact = document.querySelector('.home__contact');
 contact.addEventListener('click', () => {
-    const section = document.querySelector('#contact');
-    section.scrollIntoView({ behavior: 'smooth', block:"end" });
+    scrollView('#contact', 'end')
 
 })
+
+//handle scroll view
+function scrollView(selector, position) {
+    const section = document.querySelector(selector);
+    section.scrollIntoView({ behavior: 'smooth', block: position });
+}
