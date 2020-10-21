@@ -87,8 +87,20 @@ p {
 #navbar {
     display: flex;
     justify-content: space-between;
-    background-color: var(--purple-color);
+    background-color: transparent;
     color: var(--white-color);
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    /* position 지정 대상 중 맨 앞으로, 맨뒤로 결정 */
+    z-index: 2;
+    transition: all 300ms linear;
+    
+
+}
+#navbar.navbar--dark{
+    background-color: var(--purple-color);
 }
 .navbar__logo {
     display: flex;
@@ -139,6 +151,7 @@ p {
     background: url('imgs/background.png') center/cover no-repeat;
     padding: var(--padding-side);
     text-align: center;
+    padding-top: 70px;
 }
 
 .home__avatar{
@@ -336,6 +349,7 @@ p {
     margin: 10px; 
     margin-bottom: 50px;
     position: relative;
+    z-index: 1;
 }
 /*  */
 .project__img{
