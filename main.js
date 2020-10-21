@@ -37,4 +37,10 @@ navbarMenu.addEventListener('click', (event => {
 
 }))
 
+// move to contact section
+const contact = document.querySelector('.home__contact');
+contact.addEventListener('click', () => {
+    const section = document.querySelector('#contact');
+    section.scrollIntoView({ behavior: 'smooth', block:"end" });
 
+})
