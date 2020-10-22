@@ -161,7 +161,6 @@ p {
     text-align: center;
     padding-top: 70px;
 }
-
 .home__avatar{
     width: 200px;
     border-radius: 50%;
@@ -444,7 +443,6 @@ p {
     font-size: var(--font-regular);
     margin:10px;
     transition: all 300ms ease;
-
 }
 .contact__links i:hover{
     /* 크기 변경 시 size 대신 transform 의 scale 사용!! */
