@@ -51,10 +51,11 @@ function scrollView(selector, position) {
 }
 
 // change the opacity of home from 1 to 0 scrolling down the screen
-const homeContainer = document.querySelector('.home__cantainer');
-const homeHeight = homeContainer.offsetHeight;
+const home = document.querySelector('#home');
+const homeHeight = home.offsetHeight;
 document.addEventListener('scroll', () => {
     const height = window.scrollY;
+    const homeContainer = document.querySelector('.home__cantainer');
     // 공식을 사용하여 스크롤 다운 높이에 따라 투명도 조절! (더 자연스러움)
     homeContainer.style.opacity = 1 - height / homeHeight;
 })
