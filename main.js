@@ -27,14 +27,13 @@ navbarMenu.addEventListener('click', (event => {
     scrollView(value, 'center');
 
     // highligt the clicked section button
-    const item = navbarMenu.children;
-    for (let i = 0; i < item.length; i++){
-        if (item[i].dataset.value != value)
-            item[i].classList.remove('active');
+    const items = document.querySelectorAll('.navbar__menu__item');
+    items.forEach((item) => {
+        if (item.dataset.value != value)
+        item.classList.remove('active');
         else
-            item[i].classList.add('active');
-    }
-
+        item.classList.add('active');
+    })
 }))
 
 // move to contact section
@@ -74,3 +73,43 @@ const arrow = document.querySelector('.arrow');
 arrow.addEventListener('click', () => {
     scrollView('#home', 'end');
 })
+
+// classify projects by category
+const catagoryContainer= document.querySelector('.work__catagories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+catagoryContainer.addEventListener('click', (event) => {
+    // 첫번째 값이 없으면 두번째 값으로
+    const key = event.target.dataset.key || event.target.parentNode.dataset.key;
+    if (key == null)
+        return;
+    projectContainer.classList.add('animation');
+    
+    setTimeout(() => {
+        projects.forEach((project) => {
+            if (project.dataset.key == key || key == 'all') {
+                project.classList.remove('invisible');
+                
+            }
+            else
+                project.classList.add('invisible');
+        })
+        projectContainer.classList.remove('animation');
+    },300)
+  
+})
+const catagories = document.querySelectorAll('.catagory__btn')
+catagoryContainer.addEventListener('click', (event) => {
+    const key = event.target.dataset.key || event.target.parentNode.dataset.key;
+    if (key == null)
+        return;
+    
+    catagories.forEach((catagory) => {
+        if (catagory.dataset.key != key)
+            catagory.classList.remove('active');
+        else
+            catagory.classList.add('active');
+   })
+})
+
+

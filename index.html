@@ -165,35 +165,35 @@
         <!-- 클릭해야 하는 경우는 button사용 (li 말고)  -->
         <div class="work__catagories">
             <!-- class naming 참고 -->
-            <button class="catagory__btn active">All<sapn class="catagory__count">10</sapn></button>
-            <button class="catagory__btn">Front-end<sapn class="catagory__count">3</sapn></button>
-            <button class="catagory__btn">Back-end<sapn class="catagory__count">3</sapn></button>
-            <button class="catagory__btn">Mobile<sapn class="catagory__count">4</sapn></button>
+            <button class="catagory__btn active" data-key='all'>All<sapn class="catagory__count">10</sapn></button>
+            <button class="catagory__btn" data-key='front'>Front-end<sapn class="catagory__count">3</sapn></button>
+            <button class="catagory__btn" data-key='back'>Back-end<sapn class="catagory__count">3</sapn></button>
+            <button class="catagory__btn" data-key='mobile'>Mobile<sapn class="catagory__count">4</sapn></button>
         </div>
         <div class="work__projects">
             <!-- 이동해야 하는 경우는 a 사용 (div 말고) 섹션 구분시 div가 필수는 아님@-->
-            <a href="#" class="project">
+            <a href="#" class="project" data-key='front'>
                 <img src="/imgs/projects/project1.jpg" alt="project1" class="project__img" >
                 <div class="project__description">
                     <span>title1</span>
                     <span>desc1</span>
                 </div>
             </a>
-            <a href="#" class="project">
+            <a href="#" class="project" data-key='front'>
                 <img src="/imgs/projects/project2.jpg" alt="project1" class="project__img">
                 <div class="project__description">
                     <span>title2</span>
                     <span>desc2</span>
                 </div>
             </a>
-            <a href="#" class="project">
+            <a href="#" class="project" data-key='back'>
                 <img src="/imgs/projects/project3.jpg" alt="project1" class="project__img">
                 <div class="project__description">
                     <span>title3</span>
                     <span>desc3</span>
                 </div>
             </a>
-            <a href="#" class="project">
+            <a href="#" class="project" data-key='mobile'>
                 <img src="/imgs/projects/project4.jpg" alt="project1" class="project__img">
                 <div class="project__description">
                     <span>title4</span>
