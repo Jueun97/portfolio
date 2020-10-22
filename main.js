@@ -59,3 +59,18 @@ document.addEventListener('scroll', () => {
     // 공식을 사용하여 스크롤 다운 높이에 따라 투명도 조절! (더 자연스러움)
     homeContainer.style.opacity = 1 - height / homeHeight;
 })
+
+// show up the button when scroll down
+window.addEventListener('scroll', () => {
+    const height = window.scrollY;
+    if (height > homeHeight/2)
+        arrow.classList.add('active');
+    else
+        arrow.classList.remove('active');
+   
+})
+//move to the top when button clicked
+const arrow = document.querySelector('.arrow');
+arrow.addEventListener('click', () => {
+    scrollView('#home', 'end');
+})
