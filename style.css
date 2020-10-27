@@ -191,6 +191,7 @@ p {
 .section__container{
     max-width: var(--width-max);
     margin: auto;
+    padding-top: 51px;
 }
 #about{
 
@@ -299,6 +300,7 @@ p {
 }
 #work{
     padding: 10px;
+    padding-top: 52px;
 }
 .work__catagories{
   display: flex;
@@ -307,9 +309,9 @@ p {
 }
 .catagory__btn{
     border: 1px solid var(--lightgreay-color);
-    padding: 5px 20px;
+    padding: 5px 40px;
     border-radius: var(--border-radius);
-    margin: 25px 0;
+    margin: 25px 1px;
     position: relative;
 }
 /* opacity 범위 : 0~1 */
@@ -317,13 +319,14 @@ p {
     display: inline-block;
     border: 2px solid var(--lightgreen-color);
     border-radius: 50%;
-    margin-left: 15px;
+    margin-left: 10px;
     width:20px;
     height: 20px;
     line-height: 20px;
     font-size: var(--font-micro);
-    position: relative;
+    position: absolute;
     top: -24px;
+    right: 4px;
     opacity: 0;
     transition: all 300ms ease;
 }
@@ -336,7 +339,7 @@ p {
  .catagory__btn.active .catagory__count, .catagory__btn:hover .catagory__count{
     background-color:var(--lightgreen-color); 
     opacity: 1;
-    top:0;
+    top:0px;
 }
 /* wrap 형식 : 자동으로 동적으로 작동 가능 grid : 동적으로 작동 x */
 .work__projects{
@@ -536,6 +539,11 @@ p {
     .tools, .etc{
         padding: 20px 0px;
     }
+    .catagory__btn{
+      
+        padding: 5px 30px;
+       
+    }
     .proejct{
         flex-grow: 1;
     }
@@ -558,20 +566,54 @@ p {
         flex-direction: column-reverse;
     }
 }
+@media screen and (max-width:414px){
+    .work__catagories{
+        flex-wrap: wrap;
+        margin: 20px 0;
+    }
+    .catagory__btn{
+        padding: 10px 50px;
+        margin:1px;
+       
+    }
+    .catagory__btn.active .catagory__count, .catagory__btn:hover .catagory__count{
+        background-color:var(--lightgreen-color); 
+        opacity: 1;
+        right: 10px;
+        top:8px;
+    }
+}
 @media screen and (max-width:380px){
     .work__catagories{
         flex-wrap: wrap;
         margin: 20px 0;
     }
     .catagory__btn{
-        padding: 5px 20px;
+        padding: 10px 40px;
         margin:1px;
-    }
-    .catagory__count{
-   
-        width:20px;
-        height: 20px;
-        line-height: 20px;
        
+    }
+    .catagory__btn.active .catagory__count, .catagory__btn:hover .catagory__count{
+        background-color:var(--lightgreen-color); 
+        opacity: 1;
+        right: 10px;
+        top:8px;
+    }
+}
+
+@media screen and (max-width:280px){
+    .work__catagories{
+        flex-wrap: wrap;
+        margin: 20px 0;
+    }
+    .catagory__btn{
+        padding: 10px 20px;
+        margin:1px;
+       
+    }
+    .catagory__btn.active .catagory__count, .catagory__btn:hover .catagory__count{
+        background-color:var(--lightgreen-color); 
+        opacity: 1;
+        top:8px;
     }
 }

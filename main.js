@@ -24,7 +24,7 @@ navbarMenu.addEventListener('click', (event => {
     if (value == null)
         return;
     
-    scrollView(value, 'center');
+    scrollView(value,'start');
     navbarMenu.classList.remove('active');
 
 
