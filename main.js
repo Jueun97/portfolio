@@ -23,8 +23,10 @@ navbarMenu.addEventListener('click', (event => {
     const value = target.dataset.value; 
     if (value == null)
         return;
-   
+    
     scrollView(value, 'center');
+    navbarMenu.classList.remove('active');
+
 
     // highligt the clicked section button
     const active = document.querySelector('.navbar__menu__item.active');
@@ -39,6 +41,18 @@ navbarMenu.addEventListener('click', (event => {
     }) */
 }))
 
+const toggleBtn = document.querySelector('.navbar__toggleBtn');
+toggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('active');
+/*     if (toggleBtn.classList[1] === 'active') {
+        controller.remove('active');
+        navbarMenu.style.display = 'none'
+    }
+    else {
+        controller.add('active');
+        navbarMenu.style.display = 'block'
+    } */
+})
 // move to contact section
 const contact = document.querySelector('.home__contact');
 contact.addEventListener('click', () => {
@@ -50,6 +64,7 @@ contact.addEventListener('click', () => {
 function scrollView(selector, position) {
     const section = document.querySelector(selector);
     section.scrollIntoView({ behavior: 'smooth', block: position });
+    return 1;
 }
 
 // change the opacity of home from 1 to 0 scrolling down the screen
@@ -120,5 +135,4 @@ catagoryContainer.addEventListener('click', (event) => {
             catagory.classList.add('active');
    }) */
 })
-
 
