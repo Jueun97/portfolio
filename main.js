@@ -27,13 +27,16 @@ navbarMenu.addEventListener('click', (event => {
     scrollView(value, 'center');
 
     // highligt the clicked section button
-    const items = document.querySelectorAll('.navbar__menu__item');
+    const active = document.querySelector('.navbar__menu__item.active');
+    active.classList.remove('active');
+    target.classList.add('active');
+    /* const items = document.querySelectorAll('.navbar__menu__item');
     items.forEach((item) => {
         if (item.dataset.value != value)
         item.classList.remove('active');
         else
         item.classList.add('active');
-    })
+    }) */
 }))
 
 // move to contact section
@@ -98,18 +101,24 @@ catagoryContainer.addEventListener('click', (event) => {
     },300)
   
 })
+
+// selected button 
 const catagories = document.querySelectorAll('.catagory__btn')
 catagoryContainer.addEventListener('click', (event) => {
     const key = event.target.dataset.key || event.target.parentNode.dataset.key;
     if (key == null)
         return;
     
-    catagories.forEach((catagory) => {
+    const active = document.querySelector('.catagory__btn.active');
+    active.classList.remove('active');
+    const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+    target.classList.add('active');
+   /*  catagories.forEach((catagory) => {
         if (catagory.dataset.key != key)
             catagory.classList.remove('active');
         else
             catagory.classList.add('active');
-   })
+   }) */
 })
 
 
