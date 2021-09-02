@@ -55,8 +55,8 @@ const introduce = {
 const projectsData = [
     {gitUrl:'https://github.com/Jueun97/delivery-service',image:'./images/projects/delivery.jpg',title:'delivery-service',front:'HTML,CSS,React-Native',back:'Node.js, Express, MySQL',key:'mobile'},
     {gitUrl:'https://github.com/Jueun97/moviemory',image:'./images/projects/moviemory.gif',title:'moviemory',front:'HTML,CSS,JS',back:'Node.js,Express',key:'back'},
-    {gitUrl:'https://github.com/Jueun97/25degree',image:'./images/projects/25degree.gif',title:'25degree',front:'HTML,PostCSS,JS,React',back:'Node.js, Express, MySQL',key:'back'},
-    {gitUrl:'https://github.com/Jueun97/qr_attendance_check',image:'./images/projects/attendance.png',title:'qr_attendance_check',front:'HTML,CSS,JS',back:'Node.js, Express, socket, MySQL',key:'back'},
+    {gitUrl:'https://github.com/Jueun97/25degree',image:'./images/projects/25degree.gif',title:'25degree',front:'HTML,PostCSS,JS,React',back:'Node.js, Express, MySQL, Oracle Cloud',key:'back'},
+    {gitUrl:'https://github.com/Jueun97/qr_attendance_check',image:'./images/projects/attendance.png',title:'qr_attendance_check',front:'HTML,CSS,JS',back:'Node.js, Express, socket, MySQL, Oracle Cloud',key:'back'},
     {gitUrl:'https://github.com/Jueun97/image_editor_pro',image:'./images/projects/editor.png',title:'image_editor',front:'HTML,CSS,JS',back:'',key:'front'},
     {gitUrl:'https://github.com/Jueun97/kpop-design-megazine',image:'./images/projects/kdm.gif',title:'kpop-design-megazine',front:'HTML,CSS,JS',back:'',key:'front'}
 ]
@@ -159,7 +159,7 @@ function setProjects() {
             <h3>---front-end---</h3>
             <span>${project.front}</span>
             ${project.back && ` <h3>---back-end---</h3>
-            <span>${project.back}</span>` }
+            <span >${project.back}</span>` }
            
         </div>
         </a>`;
