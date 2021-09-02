@@ -7,7 +7,7 @@ const introduce = {
         about: 'I was able to experience front-end, back-end and app development through various projects. <br> My main field is the front end, but I am interested in the back end as well. <br> So i have been studying both of them together.',
         educaiton: {
             title: 'Haseo Univ / Aerospace Software Engineering',
-            information: '(4.29/4.50) 2016.03-2021.02'
+            information: ' 2016.03-2021.02'
         },
         certificate: [
             {
@@ -19,7 +19,7 @@ const introduce = {
                 date: '2021.06.25',
                 icon: 'database'
             }, {
-                title: 'TOEIC (960) -ETS',
+                title: 'TOEIC () -ETS',
                 date: '2021.07.25',
                 icon: 'globe'
             }
@@ -27,11 +27,11 @@ const introduce = {
         ]
     },
     "KOR": {
-        title: '안녕하세요,<br/> 생각하는 꿈나무 개발자 <br/>장주은입니다.',
+        title ㅇ: '안녕하세요,<br/> 생각하는 꿈나무 개발자 <br/>장주은입니다.',
         description : '',
         about: '저는 여러 프로젝트를 통해 프론트엔드와 백엔드 그리고 앱개발까지 다양하게 경험할 수 있었습니다. <br> 저의 주력 분야는 프론트엔드이지만 백엔드에도 관심을 갖고 계속해서 함께 공부하고 있습니다.',
         educaiton: {
-            title: '한서대학교 / 항공소프트웨어공학과 (4.29/4.50)',
+            title: '한서대학교 / 항공소프트웨어공학과 ',
             information : '2016.03-2021.02'
         },
         certificate: [
