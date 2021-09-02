@@ -18,8 +18,8 @@
     --font-large: 40px;
     --font-medium: 30px;
     --font-regular: 25px;
-    --font-small: 17px;
-    --font-micro: 13px;
+    --font-small: 18px;
+    --font-micro: 15px;
  
 
     /* Font weight */
@@ -95,14 +95,12 @@ p {
     left: 0;
     right: 0;
     /* position 지정 대상 중 맨 앞으로, 맨뒤로 결정 */
-    z-index: 1;
     transition: all 400ms linear;
-    
-
 }
 #navbar.navbar--dark{
     background-color: var(--purple-color);
     padding: 0;
+    z-index: 1;
 }
 .navbar__logo {
     display: flex;
@@ -141,6 +139,10 @@ p {
     transition: all 300ms ease;
    
 }
+.navbar__menu__item.language{
+    background-color: var(--darkpurple-color);
+    margin-right: 10px;
+}
 
 .navbar__menu__item:hover {
     background-color: var(--darkpurple-color);
@@ -157,7 +159,7 @@ p {
 }
 
 #home {
-    background: url('imgs/background.png') center/cover no-repeat;
+    background: url('images/background.png') center/cover no-repeat;
     padding: var(--padding-side);
     text-align: center;
     padding-top: 70px;
@@ -194,12 +196,17 @@ p {
     padding-top: 51px;
 }
 #about{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .about__majors{
     display: flex;
     color: rgb(78, 77, 77);
     justify-content: center;
+}
+.about__description{
+    font-size: var(--font-small);
 }
 .major{
     display: flex;
@@ -228,10 +235,24 @@ p {
 .major__description{
     font-size: var(--font-micro);
 }
-.about__jobs{
+.about__information{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-between;
+    margin: 30px 0;
+    background-color: #f8f8f8;
+    width: 70%;
+}
+.information-title{
+    font-size: var(--font-regular);   
+}
+.about__jobs{
+    width: 45%;
+}
+.description__title{
+    text-align: start;
+}
+.about__certificate{
+    width: 45%;
 }
 .job{
     display: flex;
@@ -244,7 +265,7 @@ p {
 }
 .job__description{
     margin-left: 10px;
-    color: lightgray;
+    color: rgb(207, 206, 206);
 }
 .description__period{
     font-size: var(--font-micro);
@@ -308,24 +329,26 @@ p {
   align-items: center;
 }
 .catagory__btn{
+    display: flex;
+    align-items: center;
     border: 1px solid var(--lightgreay-color);
     padding: 5px 40px;
     border-radius: var(--border-radius);
-    margin: 25px 1px;
+    margin: 25px 3px;
     position: relative;
 }
 /* opacity 범위 : 0~1 */
 .catagory__count{
-    display: inline-block;
+    display: flex;
     border: 2px solid var(--lightgreen-color);
     border-radius: 50%;
-    margin-left: 10px;
     width:20px;
     height: 20px;
-    line-height: 20px;
+    justify-content: center;
+    align-items: center;
     font-size: var(--font-micro);
     position: absolute;
-    top: -24px;
+    top:-24px;
     right: 4px;
     opacity: 0;
     transition: all 300ms ease;
@@ -339,7 +362,8 @@ p {
  .catagory__btn.active .catagory__count, .catagory__btn:hover .catagory__count{
     background-color:var(--lightgreen-color); 
     opacity: 1;
-    top:0px;
+    top:2px;
+
 }
 /* wrap 형식 : 자동으로 동적으로 작동 가능 grid : 동적으로 작동 x */
 .work__projects{
@@ -359,8 +383,8 @@ p {
     transform: scale(0.97);
 }
 .project{
-    width: 200px;
-    height: 300px;
+    width: 400px;
+    height: 250px;
     margin: 10px; 
     margin-bottom: 50px;
     position: relative;
@@ -386,21 +410,11 @@ p {
     justify-content: center;
     top:0;
     opacity: 0;
-    background-color: var(--lightpurple-color);
-    width: 200px;
+    background-color: var(--white-color);
+    width: 100%;
     height: 100%;
     font-weight: var(--weight-bold);
     transition: all 300ms ease;
-}
-.project__description h3:after{
-    content:'';
-    display: block;
-    position: relative;
-    left: 75px;
-    width: 50px;
-    height: 3px;
-    background-color: var(--black-color)
-
 }
 /* opacity는 배경을 흐리게 함! 글씨는 그대로~ */
 .project:hover .project__description{
@@ -505,6 +519,7 @@ p {
     #navbar{
         flex-direction: column;
         background-color: var(--purple-color);
+        
     }
     .navbar__menu{
         flex-direction: column;
@@ -524,10 +539,19 @@ p {
     }
     .about__majors{
         flex-direction: column;
- 
     }
     .major{
         margin: 10px;
+    }
+    .about__information{
+        flex-direction: column;
+        align-items: center;
+    }
+    .about__jobs{
+        width: 100%;
+    }
+    .about__certificate{
+        width: 100%;
     }
     .skillset{
         flex-direction: column;

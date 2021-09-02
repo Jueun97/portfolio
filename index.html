@@ -5,8 +5,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/315d637db3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="imgs/favicon.png">
-    <script src="main.js" defer></script>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script type="module" src="main.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jueun's portfolio</title>
     <meta name="description" content="portfolio for Jueun dreaming for world-reowned software engineer ">
@@ -16,7 +16,7 @@
     <!-- Navbar -->
     <nav id="navbar">
         <div class="navbar__logo">
-            <img src="imgs/favicon.png" alt="logo">
+            <img src="images/favicon.png" alt="logo">
             <a href="#">Jueun</a>
         </div>
         <!-- 새로운 페이지로 이동하는 것이 아니기 때문에 ul 사용 -->
@@ -25,28 +25,28 @@
             <li class="navbar__menu__item" data-value="#about"  >About</li>
             <li class="navbar__menu__item" data-value="#skills" >Skills</li>
             <li class="navbar__menu__item" data-value="#work" >My work</li>
-            <li class="navbar__menu__item" data-value="#testimonials" >Testimonial</li>
+          <!--   <li class="navbar__menu__item" data-value="#testimonials" >Testimonial</li> -->
             <li class="navbar__menu__item" data-value="#contact" >Contact</li>
+            <li class="navbar__menu__item language" data-value="#language" >ENG</li>
         </ul>
         <button href="#" class="navbar__toggleBtn"><i class="fas fa-bars"></i></button>
     </nav>
     <!-- Home -->
     <section id="home">
         <div class="home__cantainer">
-            <img src="./imgs/avatars/avatar.jpeg" alt="Jueun's profil photo" class="home__avatar" width="200px">
-            <h1 class="home__title"> Hello,<br/> I'm Jueun</h1>
-            <h2 class="home__description">A software engineer being able to cover <br/> both of frontend and backend part</h2>
+            <img src="./images/avatars/avatar.jpeg" alt="Jueun's profil photo" class="home__avatar" width="200px">
+            <h1 class="home__title">안녕하세요,<br/> 생각하는 꿈나무 개발자 <br/>장주은입니다.</h1>
+             <h2 class="home__description"></h2> 
             <button class="home__contact">CONTACT ME</button>
         </div>
-       
+    
     </section>
     <!-- About -->
-    <section id="about" class="section section__container">
+    <section id="about" class="section ">
         <!-- h1과 p는 반복적으로 사용되기 때문에 클래스 설정 없이 진행 -->
         <h1>About me</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero est cum repudiandae tempora nostrum non voluptate, 
-            a modi illum, rerum odio molestias sequi temporibus fugiat obcaecati, 
-            architecto quam et excepturi.</p>
+        <p class="about__description">저는 여러 프로젝트를 통해 프론트엔드와 백엔드 그리고 앱개발까지 다양하게 경험할 수 있었습니다. <br> 저의 주력 분야는 프론트엔드이지만 백엔드에도 관심을 갖고 계속해서 함께 공부하고 있습니다.
+            </p>
         <!-- about__majors -> major , div 로 구분 -->
        <div class="about__majors">
            <div class="major"> 
@@ -61,7 +61,7 @@
                     <i class="fas fa-mobile"></i>
                 </div>
                 <div class="major__title">Back-end</div>
-                <div class="major__description">NodeJS, Rest APIs, GraphQL, MySQL</div>
+                <div class="major__description">NodeJS, express, MySQL</div>
             </div>
             <div class="major">
                 <div class="major__logo">
@@ -71,27 +71,50 @@
                 <div class="major__description">React Native</div>
             </div>
        </div>
-       <div class="about__jobs">
-           <div class="job">
-               <div class="job__logo">
-                    <i class="fas fa-school"></i>
-                </div>
+       <div class="about__information">
+           <div class="about__jobs">
+               <h3 class="information-title">Education</h3>
+               <div class="job">
+                   <div class="job__logo">
+                        <i class="fas fa-school"></i>
+                    </div>
                <div class="job__description">
-                   <p class="description__title">Hanseo University Aerospace software</p>
-                   <p class="description__period">2016-2020</p>
-               </div>
-           </div>
-           <div class="job">
-                <div class="job__logo">
-                    <i class="fab fa-line"></i>
-                </div>
-                <div class="job__description">
-                    <p class="description__title">software engineer in Line Company</p>
-                    <p class="description__period">2021-until now</p>
+                       <p class="description__title">한서대학교 / 항공소프트웨어공학과 (4.29/4.50)</p>
+                    <p class="description__period">2016.03-2021.02</p>
                 </div>
             </div>
-
-       </div>
+            </div>
+            <div class="about__certificate">
+                <h3 class="information-title">Certificate</h3>
+                <div class="job">
+                    <div class="job__logo">
+                         <i class="fas fa-certificate"></i>
+                     </div>
+                <div class="job__description">
+                        <p class="description__title">정보처리기사 -한국산업인력공단</p>
+                     <p class="description__period">2020.08.28</p>
+                 </div>
+             </div>
+             <div class="job">
+                <div class="job__logo">
+                     <i class="fas fa-database"></i>
+                 </div>
+            <div class="job__description">
+                    <p class="description__title">sqld (sql 개발자) -한국데이터산업진흥원</p>
+                 <p class="description__period">2021.06.25</p>
+             </div>
+         </div>
+         <div class="job">
+            <div class="job__logo">
+                 <i class="fas fa-globe"></i>
+             </div>
+        <div class="job__description">
+                <p class="description__title">TOEIC (960) -ETS</p>
+             <p class="description__period">2021.07.25</p>
+         </div>
+     </div>
+             </div>
+        </div>
   
     </section>
     <!-- Skills -->
@@ -99,25 +122,39 @@
         <div class="section__container">
             <h1>Skills</h1>
             <h2>Skills & Attributes</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, 
-                aliquid libero? Maiores voluptatem aliquid tenetur officiis perspiciatis, 
-                ratione ea magni, nisi ex doloribus maxime ab nesciunt ullam, quibusdam voluptates minima.
-            </p>
             <div class="skillset">
                 <div class="skillset__left">
                     <h3 class="skillset__title">Skill</h3>
                     <div class="skill">
                     <div class="skill__information">
                         <span>HTML</span>
-                        <span>70%</span>
+                        <span>80%</span>
                     </div>
                     <div class="skill__progress">
-                        <div class="skill__value" style="width:70%"></div>
+                        <div class="skill__value" style="width:80%"></div>
                     </div> 
                     </div>
                     <div class="skill">
                         <div class="skill__information">
                             <span>CSS</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill__progress">
+                            <div class="skill__value" style="width:70%"></div>
+                        </div> 
+                    </div>
+                    <div class="skill">
+                        <div class="skill__information">
+                            <span>Java Script</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill__progress">
+                            <div class="skill__value" style="width:75%"></div>
+                        </div> 
+                    </div>
+                    <div class="skill">
+                        <div class="skill__information">
+                            <span>React</span>
                             <span>60%</span>
                         </div>
                         <div class="skill__progress">
@@ -126,23 +163,13 @@
                     </div>
                     <div class="skill">
                         <div class="skill__information">
-                            <span>Java Script</span>
+                            <span>React Native</span>
                             <span>50%</span>
                         </div>
                         <div class="skill__progress">
                             <div class="skill__value" style="width:50%"></div>
                         </div> 
                     </div>
-                    <div class="skill">
-                        <div class="skill__information">
-                            <span>React</span>
-                            <span>50%</span>
-                        </div>
-                        <div class="skill__progress">
-                            <div class="skill__value" style="width:50%"></div>
-                        </div> 
-                    </div>
-
 
                 </div>
                 <div class="skillset__right">
@@ -165,52 +192,80 @@
         <!-- 클릭해야 하는 경우는 button사용 (li 말고)  -->
         <div class="work__catagories">
             <!-- class naming 참고 -->
-            <button class="catagory__btn active" data-key='all'>All<span class="catagory__count">10</span></button>
-            <button class="catagory__btn" data-key='front'>Front-end<span class="catagory__count">3</span></button>
+            <button class="catagory__btn active" data-key='all'>All<span class="catagory__count">6</span></button>
+            <button class="catagory__btn" data-key='front'>Front-end<span class="catagory__count">2</span></button>
             <button class="catagory__btn" data-key='back'>Back-end<span class="catagory__count">3</span></button>
-            <button class="catagory__btn" data-key='mobile'>Mobile<span class="catagory__count">4</span></button>
+            <button class="catagory__btn" data-key='mobile'>Mobile<span class="catagory__count">1</span></button>
         </div>
         <div class="work__projects">
             <!-- 이동해야 하는 경우는 a 사용 (div 말고) 섹션 구분시 div가 필수는 아님@-->
-            <a href="#" class="project" data-key='front'>
-                <img src="/imgs/projects/project1.jpg" alt="project1" class="project__img" >
+            <a href="https://github.com/Jueun97/delivery-service" class="project" data-key='mobile'>
+                <img src="/images/projects/delivery.jpg" alt="delivery-service" class="project__img" >
                 <div class="project__description">
-                    <h3>title1</h3>
-                    <span>desc1</span>
+                    <h2>delivery-service</h2>
+                    <h3>---front-end---</h3>
+                    <span>HTML,CSS,JS,react-native</span>
+                    <h3>---back-end---</h3>
+                    <span>Node.js,Express,MySQL</span>
                 </div>
             </a>
-            <a href="#" class="project" data-key='front'>
-                <img src="/imgs/projects/project2.jpg" alt="project1" class="project__img">
+            <a href="https://github.com/Jueun97/moviemory" class="project" data-key='back'>
+                <img src="/images/projects/moviemory.gif" alt="moviemory" class="project__img">
                 <div class="project__description">
-                    <h3>title2</h3>
-                    <span>desc2</span>
+                    <h2>moviemory</h2>
+                    <h3>---front-end---</h3>
+                    <span>HTML,CSS,JS,react-native</span>
+                    <h3>---back-end---</h3>
+                    <span>Node.js,Express</span>
                 </div>
             </a>
-            <a href="#" class="project" data-key='back'>
-                <img src="/imgs/projects/project3.jpg" alt="project1" class="project__img">
+            <a href="https://github.com/Jueun97/25degree" class="project" data-key='back'>
+                <img src="/images/projects/25degree.gif" alt="25degree" class="project__img">
                 <div class="project__description">
-                    <h3>title3</h3>
-                    <span>desc3</span>
+                    <h2>25degree</h2>
+                    <h3>---front-end---</h3>
+                    <span>HTML,PostCSS,JS,React</span>
+                    <h3>---back-end---</h3>
+                    <span>Node.js,Express,MySQL</span>
                 </div>
             </a>
-            <a href="#" class="project" data-key='mobile'>
-                <img src="/imgs/projects/project4.jpg" alt="project1" class="project__img">
+            <a href="https://github.com/Jueun97/qr_attendance_check" class="project" data-key='back'>
+                <img src="/images/projects/attendance.png" alt="qr_attendance_check" class="project__img">
                 <div class="project__description">
-                    <h3>title4</h3>
-                    <span>desc4</span>
+                    <h2>qr_attendance_check</h2>
+                    <h3>---front-end---</h3>
+                    <span>HTML,CSS,JS,react-native</span>
+                    <h3>---back-end---</h3>
+                    <span>Node.js,Express,socket,MySQL</span>
+                </div>
+            </a>
+            <a href="https://github.com/Jueun97/image_editor_pro" class="project" data-key='front'>
+                <img src="/images/projects/editor.png" alt="image_editor" class="project__img">
+                <div class="project__description">
+                    <h2>image_editor</h2>
+                    <h3>---front-end---</h3>
+                    <span>HTML,CSS,JS</span>
+                </div>
+            </a>
+            <a href="https://github.com/Jueun97/kpop-design-magazine" class="project" data-key='front'>
+                <img src="/images/projects/kdm.gif" alt="kpop design megazine" class="project__img">
+                <div class="project__description">
+                    <h2>kpop design megazine</h2>
+                    <h3>---front-end---</h3>
+                    <span>HTML,CSS,JS</span> 
                 </div>
             </a>
         </div>
        
     </section>
     <!-- Testimonials -->
-    <section id="testimonials" class="section">
+<!--     <section id="testimonials" class="section">
         <div class="section__container">
             <h1>Testimonials</h1>
             <h3>See what they say about me</h3>
             <div class="testimonials ">
                 <div class="testimonial">
-                    <img src="./imgs/avatars/testimonials1.jpg" alt="testimonials1" class="testimonial__avatar" width="200px">
+                    <img src="./images/avatars/testimonials1.jpg" alt="testimonials1" class="testimonial__avatar" width="200px">
                     <div class="testimonial__description">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Nam saepe harum quod sequi adipisci corporis expedita molestias eveniet totam nobis cupiditate aperiam,
@@ -227,20 +282,20 @@
                         </p>
                         <p><a href="" class="name">Ellie</a> / TigerSpike</p>
                     </div>
-                    <img src="./imgs/avatars/testimonials2.jpg" alt="testimonials2"  class="testimonial__avatar" width="200px">
+                    <img src="./images/avatars/testimonials2.jpg" alt="testimonials2"  class="testimonial__avatar" width="200px">
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Contact -->
     <section id="contact" class="contact section ">
         <h1 class="contact__title">Let's talk</h1>
-        <h3 class="contact__email">`zxnm0901@naver.com</h3>
+        <h3 class="contact__email">(+82) 010-9049-7045</h3>
+        <h3 class="contact__email">zxnm0901@naver.com</h3>
         <div class="contact__links">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Jueun97/"><i class="fab fa-github"></i></a>
         </div>
-        <h4 class="contact__rights">2020Jueun : All rights reserved</h4>
+        <h4 class="contact__rights">2021 Jueun : All rights reserved</h4>
     </section>
     <button class="arrow active">
         <i class="fas fa-arrow-alt-circle-up"></i>

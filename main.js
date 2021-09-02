@@ -1,6 +1,57 @@
 //js 사용 시 필수적으로 선언해줘야 함! 우리의 미친 짓을 사전의 방지 가능
 'use strict'
-
+const introduce = {
+    "ENG": {
+        title: 'Hello, this is Jueun',
+        description: 'a growing rookie develper, <br> always trying to keep thinking about "WHY"',
+        about: 'I was able to experience front-end, back-end and app development through various projects. <br> My main field is the front end, but I am interested in the back end as well. <br> So i have been studying both of them together.',
+        educaiton: {
+            title: 'Haseo Univ / Aerospace Software Engineering',
+            information: '(4.29/4.50) 2016.03-2021.02'
+        },
+        certificate: [
+            {
+                title: 'Engineer Information Processing -HRDK',
+                date: '2020.08.28',
+                icon: 'certificate'
+            }, {
+                title: 'SQLD (sql developer) -Kdata',
+                date: '2021.06.25',
+                icon: 'database'
+            }, {
+                title: 'TOEIC (960) -ETS',
+                date: '2021.07.25',
+                icon: 'globe'
+            }
+            
+        ]
+    },
+    "KOR": {
+        title: '안녕하세요,<br/> 생각하는 꿈나무 개발자 <br/>장주은입니다.',
+        description : '',
+        about: '저는 여러 프로젝트를 통해 프론트엔드와 백엔드 그리고 앱개발까지 다양하게 경험할 수 있었습니다. <br> 저의 주력 분야는 프론트엔드이지만 백엔드에도 관심을 갖고 계속해서 함께 공부하고 있습니다.',
+        educaiton: {
+            title: '한서대학교 / 항공소프트웨어공학과 (4.29/4.50)',
+            information : '2016.03-2021.02'
+        },
+        certificate: [
+            {
+                title : '정보처리기사 -한국산업인력공단',
+                date: '2020.08.28',
+                icon: 'certificate'
+            }, {
+                title: 'sqld (sql 개발자) -한국데이터산업진흥원',
+                date: '2021.06.25',
+                icon: 'database'
+            },
+            {
+                title: 'TOEIC (960) -ETS',
+                date: '2021.07.25',
+                icon: 'globe'
+            }
+        ]
+    }
+}
 // change navbar color according to its height
 window.addEventListener('scroll', e => {
     //e.path[1].scrollY =  window.scrollY
@@ -20,18 +71,25 @@ window.addEventListener('scroll', e => {
 const navbarMenu = document.querySelector('.navbar__menu'); 
 navbarMenu.addEventListener('click', (event => {
     const target = event.target;
-    const value = target.dataset.value; 
+    const value = target.dataset.value;
+
     if (value == null)
         return;
-    
-    scrollView(value,'start');
+
+    if (value === '#language') {
+        const language = target.innerHTML;
+        setIntro(introduce[language]);
+        if (language === "ENG")
+            target.innerHTML = "KOR";
+        else
+            target.innerHTML = "ENG";
+    } else {
+        scrollView(value,'start');
     navbarMenu.classList.remove('active');
-
-
-    // highligt the clicked section button
-    const active = document.querySelector('.navbar__menu__item.active');
-    active.classList.remove('active');
-    target.classList.add('active');
+        // highligt the clicked section button
+        const active = document.querySelector('.navbar__menu__item.active');
+        active.classList.remove('active');
+        target.classList.add('active');
     /* const items = document.querySelectorAll('.navbar__menu__item');
     items.forEach((item) => {
         if (item.dataset.value != value)
@@ -39,8 +97,43 @@ navbarMenu.addEventListener('click', (event => {
         else
         item.classList.add('active');
     }) */
+    }
 }))
 
+
+function setIntro(data) {
+    const title = document.querySelector('.home__title');
+    const description = document.querySelector('.home__description');
+    const about = document.querySelector('.about__description');
+    const educaiton = document.querySelector('.description__title');
+    const educaitonInfo = document.querySelector('.description__period');
+    const container = document.querySelector('.about__certificate');
+
+    title.innerHTML = data.title;
+    description.innerHTML = data.description;
+    about.innerHTML = data.about;
+    educaiton.innerHTML = data.educaiton.title;
+    educaitonInfo.innerHTML = data.educaiton.information;
+    container.innerHTML = '<h3 class="information-title">Certificate</h3>';
+    data.certificate.map(certificate => {
+        const container = document.querySelector('.about__certificate');
+
+        const item = document.createElement('div');
+        item.setAttribute('class', 'job');
+        item.innerHTML = `
+        <div class="job__logo">
+            <i class="fas fa-${certificate.icon}"></i>
+        </div>
+        <div class="job__description">
+            <p class="description__title">${certificate.title}</p>
+            <p class="description__period">${certificate.date}</p>
+        </div>
+    `
+
+        container.append(item);
+    })
+    
+}
 const toggleBtn = document.querySelector('.navbar__toggleBtn');
 toggleBtn.addEventListener('click', () => {
     navbarMenu.classList.toggle('active');
@@ -93,6 +186,7 @@ arrow.addEventListener('click', () => {
 })
 
 // classify projects by category
+
 const catagoryContainer= document.querySelector('.work__catagories');
 const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
