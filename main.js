@@ -52,6 +52,17 @@ const introduce = {
         ]
     }
 }
+const projectsData = [
+    {gitUrl:'https://github.com/Jueun97/delivery-service',image:'./images/projects/delivery.jpg',title:'delivery-service',front:'HTML,CSS,React-Native',back:'Node.js, Express, MySQL',key:'mobile'},
+    {gitUrl:'https://github.com/Jueun97/moviemory',image:'./images/projects/moviemory.gif',title:'moviemory',front:'HTML,CSS,JS',back:'Node.js,Express',key:'back'},
+    {gitUrl:'https://github.com/Jueun97/25degree',image:'./images/projects/25degree.gif',title:'25degree',front:'HTML,PostCSS,JS,React',back:'Node.js, Express, MySQL',key:'back'},
+    {gitUrl:'https://github.com/Jueun97/qr_attendance_check',image:'./images/projects/attendance.png',title:'qr_attendance_check',front:'HTML,CSS,JS',back:'Node.js, Express, socket, MySQL',key:'back'},
+    {gitUrl:'https://github.com/Jueun97/image_editor',image:'./images/projects/editor.png',title:'image_editor',front:'HTML,CSS,JS',back:'',key:'front'},
+    {gitUrl:'https://github.com/Jueun97/kpop-design-megazine',image:'./images/projects/kdm.gif',title:'kpop-design-megazine',front:'HTML,CSS,JS',back:'',key:'front'}
+]
+window.addEventListener('load', () => {
+    setProjects();
+})
 // change navbar color according to its height
 window.addEventListener('scroll', e => {
     //e.path[1].scrollY =  window.scrollY
@@ -134,6 +145,32 @@ function setIntro(data) {
     })
     
 }
+function setProjects() {
+    projectsData.map(project => {
+        const container = document.querySelector('.work__projects');
+        const box = document.createElement('div');
+        box.setAttribute('class', 'project');
+        box.setAttribute('data-key', project.key);
+        const element = `
+        <a href=${project.gitUrl}>
+        <img src=${project.image} alt=${project.title} class="project__img" >
+        <div class="project__description">
+            <h2>${project.title}</h2>
+            <h3>---front-end---</h3>
+            <span>${project.front}</span>
+            ${project.back && ` <h3>---back-end---</h3>
+            <span>${project.back}</span>` }
+           
+        </div>
+        </a>`;
+        box.innerHTML = element;
+
+        container.append(box);
+
+    })
+  
+
+}
 const toggleBtn = document.querySelector('.navbar__toggleBtn');
 toggleBtn.addEventListener('click', () => {
     navbarMenu.classList.toggle('active');
@@ -186,28 +223,25 @@ arrow.addEventListener('click', () => {
 })
 
 // classify projects by category
-
-const catagoryContainer= document.querySelector('.work__catagories');
+const catagoryContainer = document.querySelector('.work__catagories');
 const projectContainer = document.querySelector('.work__projects');
-const projects = document.querySelectorAll('.project');
 catagoryContainer.addEventListener('click', (event) => {
+    const projects = document.querySelectorAll('.project');
     // 첫번째 값이 없으면 두번째 값으로
     const key = event.target.dataset.key || event.target.parentNode.dataset.key;
     if (key == null)
         return;
     projectContainer.classList.add('animation');
-    
     setTimeout(() => {
         projects.forEach((project) => {
             if (project.dataset.key == key || key == 'all') {
                 project.classList.remove('invisible');
-                
             }
             else
                 project.classList.add('invisible');
         })
         projectContainer.classList.remove('animation');
-    },300)
+    }, 300)
   
 })
 
