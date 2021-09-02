@@ -286,6 +286,7 @@ p {
     color: var(--white-color);
     margin:0;
     padding-top:10px;
+    font-size: var(--font-regular);
 }
 .skillset__left{
     flex-basis: 60%;
