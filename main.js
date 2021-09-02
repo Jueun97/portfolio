@@ -57,7 +57,7 @@ const projectsData = [
     {gitUrl:'https://github.com/Jueun97/moviemory',image:'./images/projects/moviemory.gif',title:'moviemory',front:'HTML,CSS,JS',back:'Node.js,Express',key:'back'},
     {gitUrl:'https://github.com/Jueun97/25degree',image:'./images/projects/25degree.gif',title:'25degree',front:'HTML,PostCSS,JS,React',back:'Node.js, Express, MySQL',key:'back'},
     {gitUrl:'https://github.com/Jueun97/qr_attendance_check',image:'./images/projects/attendance.png',title:'qr_attendance_check',front:'HTML,CSS,JS',back:'Node.js, Express, socket, MySQL',key:'back'},
-    {gitUrl:'https://github.com/Jueun97/image_editor',image:'./images/projects/editor.png',title:'image_editor',front:'HTML,CSS,JS',back:'',key:'front'},
+    {gitUrl:'https://github.com/Jueun97/image_editor_pro',image:'./images/projects/editor.png',title:'image_editor',front:'HTML,CSS,JS',back:'',key:'front'},
     {gitUrl:'https://github.com/Jueun97/kpop-design-megazine',image:'./images/projects/kdm.gif',title:'kpop-design-megazine',front:'HTML,CSS,JS',back:'',key:'front'}
 ]
 window.addEventListener('load', () => {
