@@ -58,7 +58,7 @@ const projectsData = [
     {gitUrl:'https://burnt-vest-2d8.notion.site/25degree-0fc52f28389d4d36a305edaac0af9b98',image:'./images/projects/25degree.gif',title:'25degree',front:'HTML,PostCSS,JS,React',back:'Node.js, Express, MySQL, Oracle Cloud',key:'back'},
     {gitUrl:'https://burnt-vest-2d8.notion.site/QR-ATTENDANCE-CHECK-5171820138234f7a90181d53f8610b41',image:'./images/projects/attendance.png',title:'qr_attendance_check',front:'HTML,CSS,JS',back:'Node.js, Express, socket, MySQL, Oracle Cloud',key:'back'},
     {gitUrl:'https://burnt-vest-2d8.notion.site/Image-Editor-9c0af3174d67487088269498a58b8089',image:'./images/projects/editor.png',title:'image_editor',front:'HTML,CSS,JS',back:'',key:'front'},
-    {gitUrl:'https://burnt-vest-2d8.notion.site/Kpop-Design-Megazine-70e969f5e5b14f5286d7ce2d5f9a7731',image:'./images/projects/kdm.gif',title:'kpop-design-megazine',front:'HTML,CSS,JS',back:'',key:'front'}
+    {gitUrl:'https://burnt-vest-2d8.notion.site/Kpop-Design-Magazine-70e969f5e5b14f5286d7ce2d5f9a7731',image:'./images/projects/kdm.gif',title:'kpop-design-magazine',front:'HTML,CSS,JS',back:'',key:'front'}
 ]
 window.addEventListener('load', () => {
     setProjects();
@@ -101,13 +101,7 @@ navbarMenu.addEventListener('click', (event => {
         const active = document.querySelector('.navbar__menu__item.active');
         active.classList.remove('active');
         target.classList.add('active');
-    /* const items = document.querySelectorAll('.navbar__menu__item');
-    items.forEach((item) => {
-        if (item.dataset.value != value)
-        item.classList.remove('active');
-        else
-        item.classList.add('active');
-    }) */
+    
     }
 }))
 
@@ -256,11 +250,5 @@ catagoryContainer.addEventListener('click', (event) => {
     active.classList.remove('active');
     const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
     target.classList.add('active');
-   /*  catagories.forEach((catagory) => {
-        if (catagory.dataset.key != key)
-            catagory.classList.remove('active');
-        else
-            catagory.classList.add('active');
-   }) */
 })
 
