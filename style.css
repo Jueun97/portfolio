@@ -366,15 +366,17 @@ p {
     top:2px;
 
 }
+.work__notice{
+    color: lightgray;
+    font-size: small;
+    margin-bottom: 10px;
+}
 /* wrap 형식 : 자동으로 동적으로 작동 가능 grid : 동적으로 작동 x */
 .work__projects{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-  /*  display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   grid-gap: 10px;*/
    margin: 0;  
    transition: all 300ms linear;
  
