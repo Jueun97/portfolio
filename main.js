@@ -54,11 +54,11 @@ const introduce = {
 }
 const projectsData = [
     {gitUrl:'https://burnt-vest-2d8.notion.site/delivery-service-381c0dad6c8f42d6a0f70d8fc2364a72',image:'./images/projects/delivery.jpg',title:'delivery-service',front:'HTML,CSS,React-Native',back:'Node.js, Express, MySQL',key:'mobile'},
-    {gitUrl:'https://burnt-vest-2d8.notion.site/MOVIEMORY-1ab56eff83b242daa9b4f246e0d635a0',image:'./images/projects/moviemory.gif',title:'moviemory',front:'HTML,CSS,JS',back:'Node.js,Express',key:'back'},
-    {gitUrl:'https://burnt-vest-2d8.notion.site/25degree-0fc52f28389d4d36a305edaac0af9b98',image:'./images/projects/25degree.gif',title:'25degree',front:'HTML,PostCSS,JS,React',back:'Node.js, Express, MySQL, Oracle Cloud',key:'back'},
+    {gitUrl:'https://burnt-vest-2d8.notion.site/MOVIEMORY-1ab56eff83b242daa9b4f246e0d635a0',image:'./images/projects/moviemory.jpg',title:'moviemory',front:'HTML,CSS,JS',back:'Node.js,Express',key:'back'},
+    {gitUrl:'https://burnt-vest-2d8.notion.site/25degree-0fc52f28389d4d36a305edaac0af9b98',image:'./images/projects/25degree.jpg',title:'25degree',front:'HTML,PostCSS,JS,React',back:'Node.js, Express, MySQL, Oracle Cloud',key:'back'},
     {gitUrl:'https://burnt-vest-2d8.notion.site/QR-ATTENDANCE-CHECK-5171820138234f7a90181d53f8610b41',image:'./images/projects/attendance.png',title:'qr_attendance_check',front:'HTML,CSS,JS',back:'Node.js, Express, socket, MySQL, Oracle Cloud',key:'back'},
     {gitUrl:'https://burnt-vest-2d8.notion.site/Image-Editor-9c0af3174d67487088269498a58b8089',image:'./images/projects/editor.png',title:'image_editor',front:'HTML,CSS,JS',back:'',key:'front'},
-    {gitUrl:'https://burnt-vest-2d8.notion.site/Kpop-Design-Magazine-70e969f5e5b14f5286d7ce2d5f9a7731',image:'./images/projects/kdm.gif',title:'kpop-design-magazine',front:'HTML,CSS,JS',back:'',key:'front'}
+    {gitUrl:'https://burnt-vest-2d8.notion.site/Kpop-Design-Magazine-70e969f5e5b14f5286d7ce2d5f9a7731',image:'./images/projects/kdm.jpg',title:'kpop-design-magazine',front:'HTML,CSS,JS',back:'',key:'front'}
 ]
 window.addEventListener('load', () => {
     setProjects();

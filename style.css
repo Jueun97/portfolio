@@ -262,6 +262,7 @@ p {
 .job__logo{
     width: 30px;
     font-size: 20px;
+    color: var(--darkgrey-color);
 }
 .job__description{
     margin-left: 10px;
@@ -405,16 +406,19 @@ p {
 }
 /* 포지션을 absolute로 지정하였기 때문에 부모클래스를 기준으로 함(static이 아닌 부모 클래스) */
 /* width, height 을 100%로 지정하면 부모클래스(work__projects)의 크기만큼 커짐! 그래서 특정 크기를 지정함 */
+.project__description>h2,.project__description>h3 {
+    color:white;
+}
 .project__description{
     display: flex;
     position: absolute;
     flex-direction: column;
-    color:black;
+    color:var(--white-color);
     justify-content: center;
     align-items: center;
     top:0;
-    opacity: 0;
-    background-color: var(--white-color);
+    opacity: 0.9;
+    background-color: rgb(66, 66, 66);
     width: 100%;
     height: 100%;
     font-weight: var(--weight-bold);
@@ -422,8 +426,8 @@ p {
 }
 /* opacity는 배경을 흐리게 함! 글씨는 그대로~ */
 .project:hover .project__description{
-    opacity: 0.8;
-    color: var(--black-color);
+    opacity: 0;
+   
 }
 #testimonials{
    background-color: #eeeeee;
