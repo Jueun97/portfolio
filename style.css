@@ -208,6 +208,11 @@ p {
 .about__description{
     font-size: var(--font-small);
 }
+.about__notice{
+    margin-top: 20px;
+    font-size: small;
+    color: lightgray;
+}
 .about__more{
     width: 10%;
     height: 40px;
